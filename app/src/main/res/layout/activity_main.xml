@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    >
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/indianred"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="165dp"
+        android:fontFamily="sans-serif-black"
+        android:text="BARBEARIA"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif-black"
+        android:text="AGENDAMENTO"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Faça o agendamento agora e garanta sua reserva."
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic">
+    </TextView>
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="NOME"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="65dp"
+        android:maxLines="1"
+        android:textStyle="italic"
+        android:inputType="text"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="@color/transparente"
+        />
+    <EditText
+       android:id="@+id/editSenha"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="SENHA"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="65dp"
+        android:maxLines="1"
+        android:textStyle="italic"
+        android:inputType="numberPassword"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="@color/transparente"
+        />
+
+    <Button
+        android:id="@+id/editBt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="50dp"
+        android:text="LOGIN"
+        android:textStyle="bold"
+        app:cornerRadius = "15dp"
+        android:textSize="17sp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/black20"
+        android:gravity="center"
+        >
+
+    </Button>
+
+
+
+</LinearLayout>
+</ScrollView>
