@@ -35,14 +35,30 @@ class Home : AppCompatActivity() {
             servicosAdapter = ServicosAdapter(this, listaServicos)
             recyclerViewServicos.setHasFixedSize(true)
             recyclerViewServicos.adapter = servicosAdapter
+            getServicos()
 
+            binding.btAgendar.setOnClickListener {
+                val intent = Intent(this,Agendamento::class.java)
+                intent.putExtra("nome", nome)
+                startActivity(intent)
+            }
 
 
         }
 
       private fun getServicos() {
 
-          val servico1 = Servicos(R.drawable.baseline_arrow_forward_24,"Corte de Cabelo" )
+          val servico1 = Servicos(R.drawable.img1,"Corte de Cabelo" )
+          listaServicos.add(servico1)
+
+          val servico2 = Servicos(R.drawable.img2,"Corte a Barba" )
+          listaServicos.add(servico2)
+
+          val servico3 = Servicos(R.drawable.img3,"Lavagem de Cabelo" )
+          listaServicos.add(servico3)
+
+          val servico4 = Servicos(R.drawable.img4,"Manicure" )
+          listaServicos.add(servico4)
 
       }
 

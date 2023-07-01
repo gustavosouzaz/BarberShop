@@ -1,5 +1,6 @@
 package com.example.barbershop.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ class ServicosAdapter(private val context: Context, private  val listaServicos: 
 
 
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServicosViewHolder {
 
       val itemLista = ServicosItemBinding.inflate(LayoutInflater.from(context), parent, false)
