@@ -1,6 +1,7 @@
 package com.example.barbershop.adapter
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.barbershop.databinding.ServicosItemBinding
@@ -12,15 +13,17 @@ class ServicosAdapter(private val context: Context, private  val listaServicos: 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServicosViewHolder {
-        TODO("Not yet implemented")
+
+      val itemLista = ServicosItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ServicosViewHolder(itemLista)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = listaServicos.size
 
     override fun onBindViewHolder(holder: ServicosViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
+        holder.imgServicos.setImageResource(listaServicos[position].img!!)
+        holder.txtServicos.text = listaServicos[position].nome
     }
 
     inner class ServicosViewHolder(binding: ServicosItemBinding): RecyclerView.ViewHolder(binding.root){
