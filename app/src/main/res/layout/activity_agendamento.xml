@@ -74,4 +74,14 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/laranja"
+        android:timePickerMode="spinner">
+
+    </TimePicker>
+
+
 </LinearLayout>
