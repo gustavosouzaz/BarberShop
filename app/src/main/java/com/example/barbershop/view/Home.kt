@@ -57,7 +57,7 @@ class Home : AppCompatActivity() {
           val servico3 = Servicos(R.drawable.img3,"Lavagem de Cabelo" )
           listaServicos.add(servico3)
 
-          val servico4 = Servicos(R.drawable.img4,"Manicure" )
+          val servico4 = Servicos(R.drawable.img4,"    Manicure" )
           listaServicos.add(servico4)
 
       }
