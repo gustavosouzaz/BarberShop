@@ -194,6 +194,19 @@
     </LinearLayout>
 
 
+    <Button
+        android:id="@+id/btAgendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/laranja"
+        android:layout_margin="40dp"
+        app:cornerRadius = "20dp">
+
+    </Button>
 
 
 
