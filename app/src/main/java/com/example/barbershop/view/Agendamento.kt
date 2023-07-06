@@ -49,8 +49,51 @@ class Agendamento : AppCompatActivity() {
             
         }
 
-        binding.timePicker.setOnTimeChangedListener { view, hourOfDay, minute ->  }
-        
-        
+        binding.timePicker.setOnTimeChangedListener { _, hourOfDay, minute ->
+
+            val minuto: String
+
+            if(minute < 10){
+                minuto = "$minute"
+            }else{
+                minuto = minute.toString()
+            }
+
+            hora = "$hourOfDay:$minuto"
+
+        }
+
+        binding.timePicker.setIs24HourView(true)
+
+        binding.btAgendar.setOnClickListener {
+
+            val barbeiro1 = binding.barbeiro1
+            val barbeiro2 = binding.barbeiro2
+            val barbeiro3 = binding.barbeiro3
+
+
+            when{
+                hora.isEmpty() -> {
+
+                }
+                hora < "8:00" && hora > "19:00" -> {
+
+                }
+                data.isEmpty() -> {
+
+                }
+               barbeiro1.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
+
+               }
+                barbeiro2.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
+
+                }
+                barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
+
+                }
+            }
+        }
+
+
     }
 }
