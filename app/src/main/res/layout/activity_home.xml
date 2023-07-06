@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Bem-vindo(a), Gustavo"
+        android:text="Bem-vindo, Gustavo"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
