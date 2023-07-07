@@ -1,11 +1,14 @@
 package com.example.barbershop.view
 
+import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.RequiresApi
 import com.example.barbershop.R
 import com.example.barbershop.databinding.ActivityAgendamentoBinding
+import com.google.android.material.snackbar.Snackbar
 import java.util.Calendar
 
 class Agendamento : AppCompatActivity() {
@@ -91,9 +94,20 @@ class Agendamento : AppCompatActivity() {
                 barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
 
                 }
+                else -> {
+
+                }
+
             }
         }
 
 
     }
+    private fun mensagem(view: View, mensagem: String, cor: String) {
+        val snackbar = Snackbar.make(view,mensagem,Snackbar.LENGTH_SHORT)
+        snackbar.setBackgroundTint(Color.parseColor("#FFFFFF"))
+        snackbar.show()
+
+    }
+
 }
