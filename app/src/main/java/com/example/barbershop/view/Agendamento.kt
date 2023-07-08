@@ -77,25 +77,25 @@ class Agendamento : AppCompatActivity() {
 
             when{
                 hora.isEmpty() -> {
-
+                     mensagem(it,"Preencha o horário!", cor = "#FF0000")
                 }
                 hora < "8:00" && hora > "19:00" -> {
-
+                     mensagem(it,"Barber Shop esta fechado - horário de atendimento das 8:00 as 19:00",cor = "#FF0000")
                 }
                 data.isEmpty() -> {
-
+                     mensagem(it,"Coloque uma data!", cor = "#FF0000")
                 }
                barbeiro1.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
-
+                   mensagem(it,"Agenddamento realizado com sucesso!", cor = "#FF03DAC5")
                }
                 barbeiro2.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
-
+                    mensagem(it,"Agendamento realizado com sucesso!", cor = "#FF03DAC5")
                 }
                 barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
-
+                    mensagem(it,"Agendamento realizado com sucesso!", cor = "#FF03DAC5")
                 }
                 else -> {
-
+                    mensagem(it,"Escolha um barbeiro!", cor = "#FF0000")
                 }
 
             }
