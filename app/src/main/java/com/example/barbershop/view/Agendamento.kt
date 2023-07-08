@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
-import com.example.barbershop.R
+
 import com.example.barbershop.databinding.ActivityAgendamentoBinding
 import com.google.android.material.snackbar.Snackbar
 import java.util.Calendar
