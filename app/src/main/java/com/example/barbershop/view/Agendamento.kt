@@ -106,15 +106,17 @@ class Agendamento : AppCompatActivity() {
     }
     private fun mensagem(view: View, mensagem: String, cor: String) {
         val snackbar = Snackbar.make(view,mensagem,Snackbar.LENGTH_SHORT)
-        snackbar.setBackgroundTint(Color.parseColor("#FFFFFF"))
+        snackbar.setBackgroundTint(Color.parseColor("#FF0000"))
+        snackbar.setTextColor(Color.parseColor("#FF0000"))
         snackbar.show()
 
     }
 
     private fun salvarAgendamento(view: View, cliente: String, barbeiro: String, data: String, hora: String) {
-        val db = FirebaseFirestore.getInstance()
 
-        val dadoUsuario = hashMapOf(
+      val db = FirebaseFirestore.getInstance()
+
+        val dadosUsuario = hashMapOf(
 
             "cliente" to cliente,
             "barbeiro" to barbeiro,
@@ -122,7 +124,7 @@ class Agendamento : AppCompatActivity() {
             "hora" to hora
         )
 
-        db.collection("agendamento").document(cliente).set(dadoUsuario).addOnCompleteListener {
+        db.collection("agendamento").document(cliente).set(dadosUsuario).addOnCompleteListener {
             mensagem(view, "Agendamento realizado com sucesso!!","#FF03DAC5")
         }.addOnFailureListener {
             mensagem(view,"Erro no servidor!!", cor = "#FF0000")
