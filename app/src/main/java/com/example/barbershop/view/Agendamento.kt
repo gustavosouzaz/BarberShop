@@ -122,5 +122,9 @@ class Agendamento : AppCompatActivity() {
             "hora" to hora
         )
 
+        db.collection("agendamento").document(cliente).set(dadoUsuario).addOnCompleteListener {
+            mensagem(view, "Agendamento realizado com sucesso!!","#FF03DAC5")
+        }
+
     }
 }
