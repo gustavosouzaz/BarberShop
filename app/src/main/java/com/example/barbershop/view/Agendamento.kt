@@ -9,6 +9,7 @@ import androidx.annotation.RequiresApi
 
 import com.example.barbershop.databinding.ActivityAgendamentoBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Calendar
 
 class Agendamento : AppCompatActivity() {
@@ -110,4 +111,16 @@ class Agendamento : AppCompatActivity() {
 
     }
 
+    private fun salvarAgendamento(view: View, cliente: String, barbeiro: String, data: String, hora: String) {
+        val db = FirebaseFirestore.getInstance()
+
+        val dadoUsuario = hashMapOf(
+
+            "cliente" to cliente,
+            "barbeiro" to barbeiro,
+            "data" to data,
+            "hora" to hora
+        )
+
+    }
 }
