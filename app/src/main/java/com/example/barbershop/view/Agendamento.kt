@@ -87,13 +87,13 @@ class Agendamento : AppCompatActivity() {
                      mensagem(it,"Coloque uma data!", cor = "#FF0000")
                 }
                barbeiro1.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
-                   mensagem(it,"Agenddamento realizado com sucesso!", cor = "#FF03DAC5")
+                  salvarAgendamento(it,nome,"Pedro Henrique",data,hora)
                }
                 barbeiro2.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
-                    mensagem(it,"Agendamento realizado com sucesso!", cor = "#FF03DAC5")
+                    salvarAgendamento(it,nome,"Bernardo Martins",data,hora)
                 }
                 barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
-                    mensagem(it,"Agendamento realizado com sucesso!", cor = "#FF03DAC5")
+                    salvarAgendamento(it,nome,"Fernanda Silva",data,hora)
                 }
                 else -> {
                     mensagem(it,"Escolha um barbeiro!", cor = "#FF0000")
@@ -124,6 +124,8 @@ class Agendamento : AppCompatActivity() {
 
         db.collection("agendamento").document(cliente).set(dadoUsuario).addOnCompleteListener {
             mensagem(view, "Agendamento realizado com sucesso!!","#FF03DAC5")
+        }.addOnFailureListener {
+            mensagem(view,"Erro no servidor!!", cor = "#FF0000")
         }
 
     }
